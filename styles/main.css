@@ -1,0 +1,141 @@
+body {
+  background-color: var(--color-background-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.container {
+  color: var(--color-text-white);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.theme {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.theme-labels {
+  text-align: right;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: -0.1rem;
+}
+
+.theme h2 {
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.theme-selection div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.theme-selection div:last-child h2 {
+  margin-right: 1.5rem;
+}
+
+.theme-selection div:last-child input:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.theme-selection div:last-child input[type="radio"] {
+  height: 1.4rem;
+  width: 1.4rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.theme-selection div:last-child input[type="radio"]:checked {
+  background-color: var(--color-key-toggle-background);
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px var(--color-key-toggle-shadow);
+}
+
+.input-selections {
+  background-color: var(--color-background);
+  padding: 0.4rem;
+  border-radius: 1.2rem;
+}
+
+.theme-labels label {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.theme-labels label:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.content {
+  margin-bottom: 2rem;
+}
+
+.calculator {
+  display: grid;
+  gap: 2rem;
+}
+
+#display {
+  width: 100%;
+  height: 7rem;
+  border-radius: 0.6rem;
+  border: none;
+  background-color: var(--color-background-dark);
+  text-align: right;
+  font-weight: bold;
+  color: #fff;
+  font-size: 2.8rem;
+  padding: 0.5rem 2rem;
+}
+
+#display:focus {
+  outline: none;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background-color: var(color-key-grey-orange-background);
+  padding: 2rem;
+  border-radius: 0.6rem;
+}
+
+.calculator-buttons button {
+  border: none;
+  height: 4rem;
+  box-shadow: 0 2px 0 1px var(--color-key-grey-orange-shadow);
+  border-radius: 0.5rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--color-text-dark);
+}
+
+#equals {
+  background-color: var(--color-key-toggle-background);
+  box-shadow: 0 2px 0 1px var(--color-key-toggle-shadow);
+  color: var(--color-key-grey-orange-background);
+}
+
+#reset,
+#delete {
+  background-color: var(--color-key-dark-background);
+  box-shadow: 0 2px 0 1px var(--color-key-dark-shadow);
+  color: var(--color-text-white);
+  font-size: 1.5rem;
+}
