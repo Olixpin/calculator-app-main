@@ -1,15 +1,12 @@
 body {
-  background-color: var(--color-background-light);
+  background-color: var(--main-background);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.container {
-  color: var(--color-text-white);
+  color: var(--text-color--1);
 }
 
 .header {
@@ -61,19 +58,13 @@ body {
 }
 
 .theme-selection div:last-child input[type='radio']:checked {
-  background-color: var(--color-key-toggle-background);
+  background-color: var(--key-background--2);
   border-radius: 100%;
-  box-shadow: 0 0 0 1px var(--color-key-toggle-shadow);
+  box-shadow: 0 0 0 1px var(--key-shadow--2);
 }
 
-/* .active {
-  background-color: var(--color-key-toggle-background);
-  border-radius: 100%;
-  box-shadow: 0 0 0 1px var(--color-key-toggle-shadow);
-} */
-
 .input-selections {
-  background-color: var(--color-background);
+  background-color: var(--keypad-background);
   padding: 0.4rem;
   border-radius: 1.2rem;
 }
@@ -101,26 +92,26 @@ body {
   height: 7rem;
   border-radius: 0.6rem;
   border: none;
-  background-color: var(--color-background-dark);
+  background-color: var(--screen-background);
   text-align: right;
   font-weight: bold;
-  color: #fff;
+  color: var(--text-color--1);
   font-size: 2.8rem;
   padding: 0.5rem 2rem;
 }
 
 #display::placeholder {
-  color: var(--color-text-white);
+  color: var(--text-color--1);
 }
 
-#display::selection {
+/* #display::selection {
   background-color: var(--color-key-toggle-background);
   color: var(--color-text-white);
-}
+} */
 
 #display:focus {
   outline: none;
-  background-color: var(--color-background-dark);
+  background-color: var(--main-background);
 }
 
 .calculator-buttons {
@@ -129,34 +120,53 @@ body {
   gap: 1.2rem;
   padding: 2rem;
   border-radius: 0.6rem;
-  background-color: var(--color-background);
+  background-color: var(--keypad-background);
 }
-
 .calculator-buttons button {
   border: none;
   height: 4rem;
-  box-shadow: 0 2px 0 1px var(--color-key-grey-orange-shadow);
   border-radius: 0.5rem;
   font-size: 2.2rem;
   font-weight: bold;
-  color: var(--color-text-dark);
   cursor: pointer;
+}
+.number,
+.operator,
+#decimal {
+  box-shadow: 0 2px 0 1px var(--key-shadow--3);
+  background-color: var(--key-background--3);
+  color: var(--text-color--2);
+}
+
+.number:hover,
+.operator:hover,
+#decimal:hover {
+  background-color: var(--key-background--3-active);
 }
 
 #equals {
-  background-color: var(--color-key-toggle-background);
-  box-shadow: 0 2px 0 1px var(--color-key-toggle-shadow);
-  color: var(--color-key-grey-orange-background);
+  background-color: var(--key-background--2);
+  box-shadow: 0 2px 0 1px var(--key-shadow--2);
+  color: var(--text-color--1);
 
   grid-area: 5 / 3 / 5 / 5;
 }
 
+#equals:hover {
+  background-color: var(--key-background--2-active);
+}
+
 #reset,
 #delete {
-  background-color: var(--color-key-dark-background);
-  box-shadow: 0 2px 0 1px var(--color-key-dark-shadow);
+  background-color: var(--key-background--1);
+  box-shadow: 0 2px 0 1px var(--key-shadow--1);
   color: var(--color-text-white);
   font-size: 1.5rem;
+}
+
+#reset:hover,
+#delete:hover {
+  background-color: var(--key-background--1-active);
 }
 
 #reset {

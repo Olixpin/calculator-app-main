@@ -17,7 +17,11 @@ const add = document.getElementById('add');
 const equals = document.getElementById('equals');
 const active = document.querySelector('.active');
 const themeInput = document.querySelectorAll('.input-selections > input');
-console.log(themeInput);
+const toggleContainer = document.querySelector('.input-selections');
+const themeSelect = document.querySelector('.theme-selection');
+const header = document.querySelector('.header');
+const deleteNum = document.getElementById('delete');
+const calculatorDisplay = document.querySelector('.calculator-display');
 
 // Set up event listeners
 
@@ -37,6 +41,9 @@ document.body.addEventListener('keydown', e => {
   }
 
   if (e.key === 'Enter') {
+    if (display.value === '') {
+      display.value = '0';
+    }
     display.value = eval(display.value);
   }
 
@@ -90,26 +97,55 @@ document.addEventListener('click', e => {
     display.value += '.';
   }
   if (e.target.id === 'equals') {
+    if (display.value === '') {
+      display.value = '0';
+    }
     display.value = eval(display.value);
   }
 });
 
+// function set theme
+let currentNumber = 1;
+const toggleSwitchHandler = () => {
+  if (currentNumber === 1) {
+    currentNumber += 1;
+    setTheme(currentNumber);
+  } else if (currentNumber === 2) {
+    currentNumber += 1;
+    setTheme(currentNumber);
+  } else if (currentNumber === 3) {
+    currentNumber = 1;
+    setTheme(currentNumber);
+  }
+};
+
+toggleSwitchHandler();
+
+function setTheme(number) {
+  document.documentElement.setAttribute('data-theme', number);
+  const items = [header, calculatorDisplay];
+  if (currentNumber === 1) {
+    items.forEach(item => {
+      item.style.setProperty('var(--text-color--1)', 'var(--text-color--2');
+    });
+  } else {
+    items.forEach(item => {
+      item.style.removeProperty('var(--text-color--1)');
+    });
+  }
+  if (currentNumber === 3) {
+    equals.style.setProperty('var(--text-color--2)', 'var(--text-color--3');
+  } else {
+    equals.style.removeProperty('var(--text-color--2)');
+  }
+}
+
 themeInput.forEach((input, index) => {
   input.addEventListener('change', () => {
-    if (input === themeInput[0]) {
-      document.body.style = 'none';
-    }
-    if (input === themeInput[1]) {
-      document.body.style.cssText =
-        'background-color: var(--color-background-light-2) ;';
-    } else if (input === themeInput[2]) {
-      document.body.style.backgroundColor = 'red';
-    } else {
-      return;
-    }
+    setTheme(index + 1);
   });
 });
 
 window.addEventListener('load', () => {
-  themeInput[0].checked = true;
+  themeInput[1].checked = true;
 });
