@@ -66,6 +66,12 @@ body {
   box-shadow: 0 0 0 1px var(--color-key-toggle-shadow);
 }
 
+.active {
+  background-color: var(--color-key-toggle-background);
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px var(--color-key-toggle-shadow);
+}
+
 .input-selections {
   background-color: var(--color-background);
   padding: 0.4rem;
@@ -110,10 +116,10 @@ body {
 .calculator-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  background-color: var(color-key-grey-orange-background);
+  gap: 1.2rem;
   padding: 2rem;
   border-radius: 0.6rem;
+  background-color: var(--color-background);
 }
 
 .calculator-buttons button {
@@ -124,12 +130,15 @@ body {
   font-size: 2.2rem;
   font-weight: bold;
   color: var(--color-text-dark);
+  cursor: pointer;
 }
 
 #equals {
   background-color: var(--color-key-toggle-background);
   box-shadow: 0 2px 0 1px var(--color-key-toggle-shadow);
   color: var(--color-key-grey-orange-background);
+
+  grid-area: 5 / 3 / 5 / 5;
 }
 
 #reset,
@@ -138,4 +147,26 @@ body {
   box-shadow: 0 2px 0 1px var(--color-key-dark-shadow);
   color: var(--color-text-white);
   font-size: 1.5rem;
+}
+
+#reset {
+  grid-area: 5 / 1 / 5 / 3;
+}
+
+.attribution {
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--color-text-white);
+}
+
+/* Set media Query for desktop */
+@media (min-width: 768px) {
+  #display {
+    height: 8rem;
+  }
 }
