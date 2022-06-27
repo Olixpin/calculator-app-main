@@ -52,7 +52,7 @@ body {
   margin-right: 0.5rem;
 }
 
-.theme-selection div:last-child input[type="radio"] {
+.theme-selection div:last-child input[type='radio'] {
   height: 1.4rem;
   width: 1.4rem;
   -webkit-appearance: none;
@@ -60,17 +60,17 @@ body {
   appearance: none;
 }
 
-.theme-selection div:last-child input[type="radio"]:checked {
+.theme-selection div:last-child input[type='radio']:checked {
   background-color: var(--color-key-toggle-background);
   border-radius: 100%;
   box-shadow: 0 0 0 1px var(--color-key-toggle-shadow);
 }
 
-.active {
+/* .active {
   background-color: var(--color-key-toggle-background);
   border-radius: 100%;
   box-shadow: 0 0 0 1px var(--color-key-toggle-shadow);
-}
+} */
 
 .input-selections {
   background-color: var(--color-background);
@@ -109,8 +109,18 @@ body {
   padding: 0.5rem 2rem;
 }
 
+#display::placeholder {
+  color: var(--color-text-white);
+}
+
+#display::selection {
+  background-color: var(--color-key-toggle-background);
+  color: var(--color-text-white);
+}
+
 #display:focus {
   outline: none;
+  background-color: var(--color-background-dark);
 }
 
 .calculator-buttons {
