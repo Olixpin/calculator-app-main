@@ -1,0 +1,61 @@
+/* Font Source */
+
+@font-face {
+     font-family: 'League Spartan';
+     src: url(https://fonts.google.com/specimen/League+Spartan);
+}
+:root {
+  /* Theme 1 */
+  /* Background Colors */
+  --color-background: hsl(223, 31%, 20%);
+  --color-background-light: hsl(222, 26%, 31%);
+  --color-background-dark: hsl(224, 36%, 15%);
+
+  /* Key Colors */
+  --color-key-dark-background: hsl(225, 21%, 49%);
+  --color-key-dark-shadow: hsl(224, 28%, 35%);
+  --color-key-toggle-background: hsl(6, 63%, 50%);
+  --color-key-toggle-shadow: hsl(6, 70%, 34%);
+  --color-key-grey-orange-background: hsl(30, 25%, 89%)
+  --color-key-grey-orange-shadow: hsl(28, 16%, 65%);
+
+  /* Text Colors */
+  --color-text-dark: hsl(221, 14%, 31%);
+  --color-text-white: hsl(0, 0%, 100%);
+
+  /* Theme 2 */
+  /* Background Colors */
+  --color-background-2: hsl(0, 0%, 93%)
+  --color-background-light-2: hsl(0, 0%, 90%);
+  --color-background-dark-2:  hsl(0, 5%, 81%);
+
+  /* Key Colors */
+  --color-key-dark-background-2: hsl(185, 42%, 37%);
+  --color-key-dark-shadow-2: hsl(185, 58%, 25%);
+  --color-key-toggle-background-2:  hsl(25, 98%, 40%); 
+  --color-key-toggle-shadow-2: hsl(25, 99%, 27%)
+  --color-key-grey-orange-background-2:hsl(45, 7%, 89%);
+  --color-key-grey-orange-shadow-2:  hsl(35, 11%, 61%);
+
+  /* Text Colors */
+  --color-text-dark-2: hsl(60, 10%, 19%);
+  --color-text-white-2: hsl(0, 0, 100%);
+
+    /* Theme 3 */
+  /* Background Colors */
+  --color-background-3: hsl(268, 75%, 9%);
+  --color-background-dark-3: hsl(268, 71%, 12%);
+
+  /* Key Colors */
+  --color-key-dark-background-3: hsl(281, 89%, 26%);
+  --color-key-dark-shadow-3: hsl(285, 91%, 52%);
+  --color-key-toggle-background-3:  hsl(176, 100%, 44%);
+  --color-key-toggle-shadow-3: hsl(177, 92%, 70%);
+  --color-key-grey-orange-background-3:hsl(268, 47%, 21%);
+  --color-key-grey-orange-shadow-3:  hsl(290, 70%, 36%);
+
+  /* Text Colors */
+  --color-text-dark-3: hsl(198, 20%, 13%);
+  --color-text-light-3: hsl(52, 100%, 62%);
+  --color-text-white-3: hsl(0, 0, 100%);
+}
